@@ -1,0 +1,23 @@
+<h2>LIST MATERI</h2>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="material_id">
+    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>>
+    <mat-cell *matCellDef="let element"> {{element.material_id}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef> Materi </mat-header-cell>>
+    <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>>
+  </ng-container>
+
+  <ng-container matColumnDef="download">
+    <mat-header-cell *matHeaderCellDef> Download </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <tr><button>download</button></tr>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</table>

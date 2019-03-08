@@ -1,0 +1,36 @@
+<h2>LIST TRAINEE</h2>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="score_id">
+    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>>
+    <mat-cell *matCellDef="let element"> {{element.score_id}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>>
+    <mat-cell *matCellDef="let element"> nama masih hardcode </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="knowledge">
+    <mat-header-cell *matHeaderCellDef> knowledge </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.knowledge}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="proactiveness">
+    <mat-header-cell *matHeaderCellDef> proactiveness </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.proactiveness}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="task">
+    <mat-header-cell *matHeaderCellDef> task </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.task}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="total">
+    <mat-header-cell *matHeaderCellDef> Total </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{(element.knowledge+element.task+element.proactiveness)/3}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</table>

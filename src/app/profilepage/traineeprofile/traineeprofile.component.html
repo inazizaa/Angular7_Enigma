@@ -1,0 +1,50 @@
+<h2>
+  YOUR PROFILE
+</h2><br>
+<div class="container">
+  <div class="row">
+    <div class="column left">
+      <p>ID Trainee : 11111111 (dummy)</p>
+      <p>Name : {{element.first_name +" "+ element.last_name}}</p>
+      <p>email: {{element.email}}</p>
+      <p>phone: {{element.phone}}</p>
+      <p>address: {{element.address}}</p>
+      <p>periode batch: 1 (03/12/2018 - 27/02/2019) (dummy)</p>
+      <br>
+      <h4>Your Score : 100</h4>
+      <table style="color: black" border="2">
+        <tr>
+          <td> Score </td>
+          <td>Knowledge : ....</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td>Proactiveness : ....</td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td>Task : ....</td>
+        </tr>
+        <tr>
+          <td> Notes </td>
+          <td>aaaaaaaaaaaaaaaaaaa</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="column right" style="background-color:#bbb;">
+      <mat-card class="mat-elevation-z1">
+        <h3 class="display">MATERI</h3>
+        <ul>
+          <li>Java</li>
+          <li>Angular</li>
+          <li>NodeJs</li>
+          <li>ReactNative</li>
+          <li>Agile Methodology</li>
+          <li>Cloud Technology</li>
+        </ul>
+        <div>
+          <button mat-raised-button color="primary" (click)="materi();">download slide</button>
+        </div>
+      </mat-card>
+    </div>

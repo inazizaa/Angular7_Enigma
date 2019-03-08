@@ -1,0 +1,24 @@
+<br>
+<div *ngFor="let element of listBatch">
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+    <mat-card class="mat-elevation-z1">
+      <h3 class="display">BATCH {{element.sequence}}</h3>
+      <p>Description: {{element.description}}</p>
+      <p>Start Date : {{element.startDate}}</p>
+      <p>Finish Date: {{element.finishDate}}</p>
+      <div>
+        <button mat-raised-button color="primary" routerLink="/batchPage">detail</button>
+      </div>
+    </mat-card>
+    <!-- 
+  <mat-card class="mat-elevation-z1 ">
+    <h3 class="display">BATCH 2</h3>
+    <p>Description: .......................</p>
+    <p>Start Date : ...........</p>
+    <p>Finish Date: ..........</p>
+    <div>
+      <button mat-raised-button color="warn" routerLink="/batchPage">detail</button>
+    </div>
+  </mat-card> -->
+  </div>
+</div>
